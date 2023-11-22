@@ -3,15 +3,15 @@
 @section('content')
 <section id="header">
     <div class="min-h-screen w-full relative text-white">
-        <img class="w-full h-full object-cover" src="{{ asset('storage/jujutsu.gif') }}" alt="jujutsu" />
-        <div class="absolute top-0 left-0 w-full h-full bg-[#0000006c] font-extrabold  flex-col flex justify-center items-start px-20">
-            <div class="text-7xl mb-10" data-aos="fade-right" data-aos-duration="1500">
+        <img class="w-full min-h-screen object-cover" src="{{ asset('storage/jujutsu.gif') }}" alt="jujutsu" />
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0000006c] font-extrabold  flex-col flex justify-center items-center lg:items-start px-10 lg:px-20" data-aos="fade-up" data-aos-duration="2000">
+            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10">
                 Explore Your World
             </div>
-            <div class="text-7xl mb-10" data-aos="fade-right" data-aos-duration="2000">
+            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" >
                 Find Your Favorite Anime
             </div>
-            <div class="text-7xl" data-aos="fade-right" data-aos-duration="3000">
+            <div class="text-4xl text-center lg:text-7xl">
                 Enjoy Your Life
             </div>
         </div>
