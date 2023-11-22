@@ -53,7 +53,7 @@
                     </div>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Moshimo - Daisuke | Naruto Shippuden OP 12</h5>
+                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Naruto Shippuden - Opening 6 | Sign</h5>
                         </a>
                         <a href="#" class="inline-flex items-center justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 px-4 py-3 mb-10 text-sm font-medium text-white bg-[#0869D4] rounded-3xl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-800 hover:translate-y-[-5px] transition duration-300 ease-in-out hover:bg-blue-800">
                             Watch Opening
@@ -70,7 +70,7 @@
                     </div>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</h5>
+                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Moshimo - Daisuke | Naruto Shippuden OP 12</h5>
                         </a>
                         <a href="#" class="inline-flex items-center justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 px-4 py-3 mb-10 text-sm font-medium text-white bg-[#0869D4] rounded-3xl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-800 hover:translate-y-[-5px] transition duration-300 ease-in-out hover:bg-blue-800">
                             Watch Opening

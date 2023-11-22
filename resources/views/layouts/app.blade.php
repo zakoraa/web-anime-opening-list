@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <script src="{{ asset('js/navbar.js') }}"></script>
   <script>
     AOS.init();
   </script>
