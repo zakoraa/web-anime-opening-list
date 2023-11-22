@@ -1,5 +1,5 @@
 <!-- bg-[#101820] -->
-<nav class=" h-24 text-white fixed w-full">
+<nav class="top-0 left-0 h-24 text-white fixed w-full z-10">
     <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-16 h-full  flex items-center">
       <div class="relative flex items-center me-2">
         <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="70px">
@@ -20,6 +20,10 @@
           </span></h1>
         <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
             About
+            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </span></h1>
+        <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
+            Logout
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></h1>
       </div>
