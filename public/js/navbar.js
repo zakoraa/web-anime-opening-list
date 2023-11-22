@@ -5,9 +5,9 @@ window.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > headerHeight - 80) {
         navbar.style.backgroundColor = "#101820";
-        navbar.style.transitionDuration = "duration-500";
+        navbar.style.transition = "background-color 0.5s";
     } else {
         navbar.style.backgroundColor = "";
-        navbar.style.transitionDuration = "";
+        navbar.style.transition = "";
     }
 });

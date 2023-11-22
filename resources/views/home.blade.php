@@ -30,7 +30,7 @@
         <div class="bg-white h-96 mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                     </div>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                     </div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="fade-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://i.ytimg.com/vi/yu12tTrkJ-g/maxresdefault.jpg" />
                     </div>
