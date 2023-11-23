@@ -27,7 +27,7 @@
             <div class=" mb-16">Anime Openings</div>
         </div>
 
-        <div class="bg-white h-96 mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;">
+        <div class="bg-white mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
 
                 <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
@@ -79,4 +79,42 @@
         </div>
     </div>
 </section>
+
+<section id="swiper">
+    <div class="swiper w-full min-h-screen flex justify-center items-center">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+            </div>
+            <div class="swiper-slide">
+            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+            </div>
+            <div class="swiper-slide">
+            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+            </div>
+            <div class="swiper-slide">
+            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+            </div>
+            <div class="swiper-slide">
+            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+            </div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+</section>
+
+<!-- Slider main container -->
+
 @endsection

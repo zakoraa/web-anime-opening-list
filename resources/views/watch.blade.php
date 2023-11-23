@@ -27,13 +27,11 @@
                         <p class="absolute bottom-0 right-0 rounded-md bg-black text-white px-4 py-1 m-1" style="font-size: 8px;">10:30</p>
                         <img class="rounded-md" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" alt="title" style="max-width: 120px; height: auto;">
                     </div>
-
                     <div class="p-4">
                         <h2 class="text-xs font-semibold line-clamp-2">
                             Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!
                         </h2>
                     </div>
-
                 </div>
                 <div class="flex">
                     <div class="relative pt-4 ps-4">
