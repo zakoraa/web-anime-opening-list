@@ -4,14 +4,14 @@
 <section id="header">
     <div class="min-h-screen w-full relative text-white">
         <img class="w-full min-h-screen object-cover" src="{{ asset('storage/jujutsu.gif') }}" alt="jujutsu" />
-        <div class="absolute top-0 left-0 w-full h-full bg-[#0000006c] font-extrabold  flex-col flex justify-center items-center lg:items-start px-10 lg:px-20" data-aos="fade-up" data-aos-duration="2000">
-            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#0000006c] font-extrabold  flex-col flex justify-center items-center lg:items-start px-10 lg:px-20">
+            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
                 Explore Your World
             </div>
-            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" >
+            <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
                 Find Your Favorite Anime
             </div>
-            <div class="text-4xl text-center lg:text-7xl">
+            <div class="text-4xl text-center lg:text-7xl" data-aos="fade-up" data-aos-duration="3000">
                 Enjoy Your Life
             </div>
         </div>
@@ -35,9 +35,7 @@
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                     </div>
                     <div class="p-5">
-                        <a href="#">
-                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</h5>
-                        </a>
+                        <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</h5>
                         <a href="/watch" class="inline-flex items-center justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 px-4 py-3 mb-10 text-sm font-medium text-white bg-[#0869D4] rounded-3xl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-800 hover:translate-y-[-5px] transition duration-300 ease-in-out hover:bg-blue-800">
                             Watch Opening
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -52,9 +50,7 @@
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                     </div>
                     <div class="p-5">
-                        <a href="#">
-                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Naruto Shippuden - Opening 6 | Sign</h5>
-                        </a>
+                        <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Naruto Shippuden - Opening 6 | Sign</h5>
                         <a href="#" class="inline-flex items-center justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 px-4 py-3 mb-10 text-sm font-medium text-white bg-[#0869D4] rounded-3xl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-800 hover:translate-y-[-5px] transition duration-300 ease-in-out hover:bg-blue-800">
                             Watch Opening
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -69,9 +65,7 @@
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://i.ytimg.com/vi/yu12tTrkJ-g/maxresdefault.jpg" />
                     </div>
                     <div class="p-5">
-                        <a href="#">
-                            <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Moshimo - Daisuke | Naruto Shippuden OP 12</h5>
-                        </a>
+                        <h5 class="mb-10 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Moshimo - Daisuke | Naruto Shippuden OP 12</h5>
                         <a href="#" class="inline-flex items-center justify-center absolute bottom-0 left-1/2 transform -translate-x-1/2 px-4 py-3 mb-10 text-sm font-medium text-white bg-[#0869D4] rounded-3xl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-800 hover:translate-y-[-5px] transition duration-300 ease-in-out hover:bg-blue-800">
                             Watch Opening
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

@@ -12,7 +12,7 @@
     <div class="w-screen lg:flex">
         <div class="m-10" style="flex: 2;">
             <div class="video-wrapper flex justify-start items-center mb-5">
-                <iframe class="shadow-slate-700 shadow-2xl rounded-lg" height="437px" width="100%" src="https://www.youtube.com/embed/LKP-vZvjbh8" allow="autoplay" allowFullScreen title="YouTube Video"></iframe>
+                <iframe class="shadow-slate-700 shadow-2xl rounded-lg" height="437px" width="100%" src="https://www.youtube.com/embed/LKP-vZvjbh8" allowfullscreen title="YouTube Video"></iframe>
             </div>
             <h1 class="text-3xl mb-5">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</h1>
             <h1 class="text-lg rounded-2xl bg-slate-800 lg:w-1/3 px-5 py-2">Anime : Attack on Titan</h1>
