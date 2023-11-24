@@ -27,10 +27,10 @@
             <div class=" mb-16">Anime Openings</div>
         </div>
 
-        <div class="bg-white mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;">
+        <div class="bg-white mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;" data-aos="slide-up" data-aos-duration="1000">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                     </div>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                     </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;" data-aos="slide-up" data-aos-duration="1000">
+                <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;">
                     <div class="object-cover" style="height: 250px;">
                         <img class="rounded-t-3xl h-full w-full object-cover" src="https://i.ytimg.com/vi/yu12tTrkJ-g/maxresdefault.jpg" />
                     </div>
@@ -80,44 +80,46 @@
     </div>
 </section>
 
-<section id="swiper">
-    <div class="w-full min-h-screen flex justify-center items-center flex-col">
-        <div class="">
-            <img class="w-screen h-auto" src="{{ asset('storage/jujutsu_wallpaper.jpg') }}" alt="foryou">
-            < <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent ">For You
+<section id="swiper" data-aos="slide-up" data-aos-duration="1000">
+    <div class="w-full flex justify-start items-center flex-col">
+        <div class="relative flex justify-start items-start">
+            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/for_you.jpg') }}" alt="foryou" style="border-radius: 100px;">
+            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820e1] from-transparent flex justify-center items-center -translate-y-24" style="border-radius: 100px;">
+                <p class="text-white text-7xl font-extrabold mb-16 ">For You</p>
+            </div>
         </div>
-
     </div>
-    <div class="swiper w-full -translate-y-44">
+    <div class="swiper w-full -translate-y-56 ">
         <div class="swiper-wrapper h-screen">
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
                 <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
 
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev w-10 bg-white p-10 rounded-full"></div>
+        <div class="swiper-button-next w-10 bg-white p-10 rounded-full"></div>
+        <div class="swiper-pagination "></div>
     </div>
     </div>
 </section>
