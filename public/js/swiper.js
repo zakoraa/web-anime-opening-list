@@ -1,11 +1,9 @@
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
-    loop: true,
     slidesPerView : 3,
     spaceBetween: 30,
-    slidesPerGroup: 3,
+    slidesPerGroup: 5,
     loopFillGroupWithBlank: true,
-
     pagination: {
       el: '.swiper-pagination',
     },

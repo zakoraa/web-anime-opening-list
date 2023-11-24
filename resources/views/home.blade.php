@@ -81,40 +81,45 @@
 </section>
 
 <section id="swiper">
-    <div class="swiper w-full min-h-screen flex justify-center items-center">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
+    <div class="w-full min-h-screen flex justify-center items-center flex-col">
+        <div class="">
+            <img class="w-screen h-auto" src="{{ asset('storage/jujutsu_wallpaper.jpg') }}" alt="foryou">
+            < <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent ">For You
+        </div>
+
+    </div>
+    <div class="swiper w-full -translate-y-44">
+        <div class="swiper-wrapper h-screen">
             <div class="swiper-slide">
-            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
             <div class="swiper-slide">
-            <img class="rounded-3xl h-80 w-auto object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+            </div>
+            <div class="swiper-slide">
+                <img class="rounded-3xl h-96 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
+                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
             </div>
 
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
     </div>
-
+    </div>
 </section>
-
-<!-- Slider main container -->
 
 @endsection
