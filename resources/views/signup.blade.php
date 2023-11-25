@@ -19,7 +19,7 @@
                 <div class="mb-10">
                     <input type="password" id="password" name="password" class="w-full px-5 py-4 lg:px-5 lg:py-6 mb-6 rounded-3xl focus:outline-none " placeholder="Password" required style="background-color: #0000009c;">
                 </div>
-                <button type="submit" class="w-full rounded-3xl py-4 lg:py-6" style="background-color: #101820; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#374151';" onmouseout="this.style.backgroundColor='#101820';">
+                <button href="/" type="submit" class="w-full rounded-3xl py-4 lg:py-6" style="background-color: #101820; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#374151';" onmouseout="this.style.backgroundColor='#101820';">
                     Sign Up
                 </button>
 
@@ -30,7 +30,7 @@
         <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="70px">
         <div class="flex w-52 lg:w-56 justify-between">
             <h1 class="rounded-lg cursor-pointer hover:bg-[#0000009c] transition duration-300 py-2 px-4">Sign Up</h1>
-            <h1 class="py-2 px-4 rounded-lg cursor-pointer hover:bg-[#0000009c] transition duration-300">Login </h1>
+            <a href="/login" class="py-2 px-4 rounded-lg cursor-pointer hover:bg-[#0000009c] transition duration-300">Login </a>
         </div>
     </div>
 

@@ -93,33 +93,33 @@
         <div class="swiper-wrapper h-screen">
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent ">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://fin.co.id/upload/786721f5e4adae9d7ef09758e253a5b8.jpg" />
-                <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820a8] to-transparent "></div>
+                <div class="absolute inset-x-0 bottom-0 h-full flex items-end text-center text-white text-xl font-bold pb-3 bg-gradient-to-t from-[#101820e1] to-transparent">Attack on Titan Season 2 - Opening | Shinzou wo Sasageyo!</div>
             </div>
 
         </div>
-        <div class="swiper-button-prev w-10 bg-white p-10 rounded-full"></div>
-        <div class="swiper-button-next w-10 bg-white p-10 rounded-full"></div>
-        <div class="swiper-pagination "></div>
+        <div class="swiper-button-prev bg-white p-10 rounded-full"></div>
+        <div class="swiper-button-next bg-white p-10 rounded-full"></div>
+        <div class="swiper-pagination"></div>
     </div>
     </div>
 </section>
