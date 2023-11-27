@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SignUpController;
+use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, "index"]);
 
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::get('/login',  [LoginController::class, "index"]);
 
-Route::get('/watch', function () {
-    return view('watch');
-});
+Route::get('/signup',  [SignUpController::class, "index"]);
+
+Route::get('/watch',  [WatchController::class, "index"]);

@@ -84,7 +84,7 @@
     <div class="w-full flex justify-start items-center flex-col">
         <div class="relative flex justify-start items-start">
             <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/anime.jpg') }}" alt="foryou" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
-            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -translate-y-24" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
+            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -top-24" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
                 <p class="text-white text-7xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
             </div>
         </div>
