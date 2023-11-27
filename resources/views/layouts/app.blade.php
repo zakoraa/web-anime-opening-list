@@ -15,6 +15,14 @@ https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js
 https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css
 " rel="stylesheet">
 
+  <style>
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      color: #101820;
+      font-size: 13px;
+    }
+  </style>
+
 
 </head>
 

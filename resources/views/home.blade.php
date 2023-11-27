@@ -80,16 +80,16 @@
     </div>
 </section>
 
-<section id="swiper" data-aos="slide-up" data-aos-duration="1000">
+<section id="swiper">
     <div class="w-full flex justify-start items-center flex-col">
         <div class="relative flex justify-start items-start">
-            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/for_you.jpg') }}" alt="foryou" style="border-radius: 100px;">
-            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820e1] from-transparent flex justify-center items-center -translate-y-24" style="border-radius: 100px;">
+            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/anime.jpg') }}" alt="foryou" style="border-radius: 100px;">
+            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -translate-y-24" style="border-radius: 100px;">
                 <p class="text-white text-7xl font-extrabold mb-16 ">For You</p>
             </div>
         </div>
     </div>
-    <div class="swiper w-full -translate-y-56 ">
+    <div class="swiper w-full -translate-y-72">
         <div class="swiper-wrapper h-screen">
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
@@ -117,9 +117,8 @@
             </div>
 
         </div>
-        <div class="swiper-button-prev bg-white p-10 rounded-full"></div>
-        <div class="swiper-button-next bg-white p-10 rounded-full"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
+        <div class="swiper-button-next bg-white p-6 rounded-full"></div>
     </div>
     </div>
 </section>
