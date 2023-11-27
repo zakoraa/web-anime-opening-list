@@ -27,7 +27,7 @@
             <div class=" mb-16">Anime Openings</div>
         </div>
 
-        <div class="bg-white mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;" data-aos="slide-up" data-aos-duration="1000">
+        <div class="bg-white mt-16 overflow-visible" style="border-top-left-radius: 100px; border-top-right-radius: 100px;" data-aos="fade-up" data-aos-duration="1000">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
 
                 <div class="max-w-sm bg-white border rounded-3xl shadow dark:bg-gray-800 relative" style="top: -130px; height: 510px;">
@@ -83,13 +83,13 @@
 <section id="swiper">
     <div class="w-full flex justify-start items-center flex-col">
         <div class="relative flex justify-start items-start">
-            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/anime.jpg') }}" alt="foryou" style="border-radius: 100px;">
-            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -translate-y-24" style="border-radius: 100px;">
-                <p class="text-white text-7xl font-extrabold mb-16 ">For You</p>
+            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/anime.jpg') }}" alt="foryou" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
+            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -translate-y-24" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
+                <p class="text-white text-7xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
             </div>
         </div>
     </div>
-    <div class="swiper w-full -translate-y-72">
+    <div class="swiper w-full absolute -top-72" data-aos="fade-up" data-aos-duration="1000">
         <div class="swiper-wrapper h-screen">
             <div class="swiper-slide">
                 <img class="rounded-3xl h-72 object-cover" src="https://akcdn.detik.net.id/visual/2022/02/05/attack-on-titan_169.png?w=650" />
