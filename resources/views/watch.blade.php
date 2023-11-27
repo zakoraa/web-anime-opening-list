@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite('resources/css/app.css')
-</head>
+@section('content')
 
-<body class="bg-[#101820] text-white">
+<section id="watch" class="bg-[#101820] text-white">
     <div class="w-screen lg:flex">
         <div class="m-10" style="flex: 2;">
             <div class="video-wrapper flex justify-start items-center mb-5">
@@ -116,6 +110,4 @@
         </div>
     </div>
 
-</body>
-
-</html>
+@endsection

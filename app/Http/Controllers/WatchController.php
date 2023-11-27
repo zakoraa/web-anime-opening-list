@@ -8,6 +8,6 @@ class WatchController extends Controller
 {
     function index()
     {
-        return view("/home");
+        return view("/watch");
     }
 }

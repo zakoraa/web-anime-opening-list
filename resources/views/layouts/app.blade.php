@@ -27,9 +27,6 @@ https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css
 </head>
 
 <body class="bg-[#101820]">
-
-  @include('components.navbar')
-
   @yield('content')
 
 </body>

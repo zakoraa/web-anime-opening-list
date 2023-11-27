@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @vite('resources/css/app.css')
-</head>
+@section('content')
 
-<body class="bg-[#101820]  max-h-screen fixed w-full text-white">
+<section id="signup" class="bg-[#101820]  max-h-screen fixed w-full text-white">
     <img class="w-full object-cover min-h-screen z-0" src="{{ asset('storage/anime.webp') }}" alt="jujutsu" />
     <div class="absolute top-0 left-0 w-full h-full font-extrabold flex-col flex justify-center items-center px-5 lg:px-20">
         <div class="lg:w-2/3 w-full rounded-lg p-8 mt-5">
@@ -37,8 +31,6 @@
     <div class="absolute bottom-0 right-0 p-10 text-xs lg:text-start text-center">
     © Muhammad Rafli Silehu | Mobile Developer at Google
     </div>
-</body>
+</section>
 
-
-
-</html>
+@endsection
