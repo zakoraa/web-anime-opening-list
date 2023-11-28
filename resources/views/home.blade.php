@@ -24,7 +24,7 @@
 
 <section id="trending">
     <div class="bg-[#101820] w-full text-white text-center ">
-        <div class="p-20 text-5xl font-extrabold">
+        <div class="p-20 text-5xl font-extrabold" data-aos="fade-up" data-aos-duration="1000">
             <div class="mb-5">Top 3 </div>
             <div class="mb-5">Most Popular</div>
             <div class=" mb-16">Anime Openings</div>
