@@ -22,10 +22,12 @@
             About
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></h1>
-        <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
+          @auth
+        <a href="{{ route('logout') }}" class="font-semibold relative cursor-pointer"><span class="group inline-block">
             Logout
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </span></h1>
+          </span></a>
+          @endauth
       </div>
 
       <!-- Mobile display -->

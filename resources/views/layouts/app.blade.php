@@ -30,5 +30,11 @@
 <script>
   AOS.init();
 </script>
+<script>
+    function closeAlert() {
+        var alert = document.getElementById('myAlert');
+        alert.style.display = 'none';
+    }
+</script>
 
 </html>
