@@ -17,6 +17,20 @@
     @include('components.sidebar_admin')
 
     @yield('content')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const listItems = document.querySelectorAll('.list-item');
+
+            listItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
+
+
 
 </html>
