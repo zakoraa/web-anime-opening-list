@@ -18,9 +18,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/admin",[AdminController::class,"index"])->name("admin");
+
 Route::get("/admin/video-list",function(){
     return view("admin/video_list");
 })->name("video-list");
+
+Route::get("/admin/update-title",function(){
+    return view("admin/update_title");
+})->name("update-title");
+
+Route::get("/admin/update-anime",function(){
+    return view("admin/update_anime");
+})->name("update-anime");
+
+Route::get("/admin/update-link-id",function(){
+    return view("admin/update_link_id");
+})->name("update-linkID");
 
 Route::get("/auth",[AuthController::class, "index"]);
 Route::get("/auth/login",[AuthController::class, "login"])->name("login");

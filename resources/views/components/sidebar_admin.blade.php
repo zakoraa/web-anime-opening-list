@@ -27,8 +27,7 @@
                     </div>
                     <ul class="hidden flex-col group-hover:block w-full ml-2 mt-2 py-2 bg-gray-900 text-gray-300">
                         <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('video-list') }}">Video List</a> </li>
-                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="#">Add Video</a> </li>
-                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="#">Update Video</a></li>
+                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" onclick="togglePopup('addVideoPopup')">Add Video</a> </li>
                     </ul>
                 </div>
             </li>
@@ -57,4 +56,48 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Add Video Popup -->
+    <div id="addVideoPopup" class="hidden text-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-lg popup">
+        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="togglePopup('addVideoPopup')">Close</button>
+        <form class="space-y-4">
+            <label for="title" class="block">Title:</label>
+            <input type="text" id="title" name="title" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <label for="anime" class="block">Anime:</label>
+            <input type="text" id="anime" name="anime" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <label for="linkId" class="block">Link ID:</label>
+            <input type="text" id="linkId" name="linkId" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+
+    <!-- Update Video Title Popup -->
+    <div id="updateVideoTitlePopup" class="  hidden text-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white  p-8 rounded-lg shadow-lg popup">
+        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="togglePopup('updateVideoTitlePopup')">Close</button>
+        <form class="space-y-4">
+            <label for="updateTitle" class="block">New Title:</label>
+            <input type="text" id="updateTitle" name="updateTitle" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+
+    <!-- Update Video Anime Popup -->
+    <div id="updateVideoAnimePopup" class=" hidden text-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-lg popup">
+        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="togglePopup('updateVideoAnimePopup')">Close</button>
+        <form class="space-y-4">
+            <label for="updateAnime" class="block">New Anime:</label>
+            <input type="text" id="updateAnime" name="updateAnime" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
+
+    <!-- Update Video LinkID Popup -->
+    <div id="updateVideoLinkIDPopup" class=" hidden text-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-lg popup">
+        <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800" onclick="togglePopup('updateVideoLinkIDPopup')">Close</button>
+        <form class="space-y-4">
+            <label for="updateLinkID" class="block">New Link ID:</label>
+            <input type="text" id="updateLinkID" name="updateLinkID" class="border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500"><br>
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+        </form>
+    </div>
 </div>
