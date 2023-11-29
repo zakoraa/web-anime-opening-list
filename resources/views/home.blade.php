@@ -4,6 +4,7 @@
 
 @include('components.navbar')
 
+<div class="bg-[#101820]">
 <section id="header">
     <div class="min-h-screen w-full relative text-white">
         <img class="w-full min-h-screen object-cover" src="{{ asset('storage/jujutsu.gif') }}" alt="jujutsu" />
@@ -125,5 +126,7 @@
     </div>
     </div>
 </section>
+</div>
+
 
 @endsection
