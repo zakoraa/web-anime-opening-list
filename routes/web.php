@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,11 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/admin",[AdminController::class,"index"])->name("admin");
+Route::get("/admin",[UserController::class,"index"])->name("admin");
 
 Route::get("/admin/video-list",function(){
     return view("admin/video_list");
 })->name("video-list");
+
+Route::get("/admin/add-video",function(){
+    return view("admin/add_video");
+})->name("add-video");
 
 Route::get("/admin/update-title",function(){
     return view("admin/update_title");
