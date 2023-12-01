@@ -16,12 +16,17 @@
                 </tr>
             </thead>
             <tbody class="text-gray-700">
+                @foreach($videos as $item)
                 <tr>
-                    <td class="border px-4 py-2">1</td>
-                    <td class="border px-4 py-2">Sasageyo</td>
-                    <td class="border px-4 py-2">Attack On Titan</td>
-                    <td class="border px-4 py-2">LKP-vZvjbh8?si=tdGQrx2dTebkk_PM</td>
-                    <td class="border px-4 py-2">vZvjbh8?si=tdGQrx2dTebkk_PM</td>
+                    <td class="border px-4 py-2">{{$item["id"]}}</td>
+                    <td class="border px-4 py-2">{{$item["title"]}}</td>
+                    <td class="border px-4 py-2">{{$item["anime"]}}</td>
+                    <td class="border px-4 py-2">{{$item["link_id"]}}</td>
+                    <td class="border px-4 py-2">
+                        <div class="flex justify-center ">
+                            <img src="{{$item['thumbnail']}}" alt="thumbnail" width="150">
+                        </div>
+                    </td>
                     <td class="border px-4 py-2 flex justify-center">
                         <button onclick="togglePopup('updateVideo')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline">Edit</button>
                     </td>
@@ -29,19 +34,7 @@
                         <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
                     </td>
                 </tr>
-                <tr>
-                    <td class="border px-4 py-2">1</td>
-                    <td class="border px-4 py-2">Sasageyo</td>
-                    <td class="border px-4 py-2">Attack On Titan</td>
-                    <td class="border px-4 py-2">LKP-vZvjbh8?si=tdGQrx2dTebkk_PM</td>
-                    <td class="border px-4 py-2">vZvjbh8?si=tdGQrx2dTebkk_PM</td>
-                    <td class="border px-4 py-2 flex justify-center">
-                        <button onclick="togglePopup('updateVideo')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline">Edit</button>
-                    </td>
-                    <td class="border px-4 py-2 flex justify-center">
-                        <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -53,9 +46,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </div>
-            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update-title') }}">Update Video Title</a>
-            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update-anime') }}">Update Video Anime</a>
-            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update-linkID') }}">Update Video Link ID</a>
+            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update.title') }}">Update Video Title</a>
+            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update.anime') }}">Update Video Anime</a>
+            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update.linkID') }}">Update Video Link ID</a>
+            <a class="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600" href="{{ route('update.thumbnail') }}">Update Video Thumbnail</a>
         </div>
     </div>
 

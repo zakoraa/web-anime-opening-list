@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,25 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/admin",[UserController::class,"index"])->name("admin");
 
-Route::get("/admin/video-list",function(){
-    return view("admin/video_list");
-})->name("video-list");
-
-Route::get("/admin/add-video",function(){
-    return view("admin/add_video");
-})->name("add-video");
-
-Route::get("/admin/update-title",function(){
-    return view("admin/update_title");
-})->name("update-title");
-
-Route::get("/admin/update-anime",function(){
-    return view("admin/update_anime");
-})->name("update-anime");
-
-Route::get("/admin/update-link-id",function(){
-    return view("admin/update_link_id");
-})->name("update-linkID");
+Route::post("/admin/add-video",[VideoController::class,"create"])->name("add.video.process");
+Route::get("/admin/video-list",[VideoController::class, "tableVideo"])->name("video.list");
+Route::get("/admin/add-video",[VideoController::class, "addVideo"])->name("add.video");
+Route::get("/admin/update-title",[VideoController::class, "updateTitle"])->name("update.title");
+Route::get("/admin/update-anime",[VideoController::class, "updateAnime"])->name("update.anime");
+Route::get("/admin/update-link-id",[VideoController::class, "updateLinkID"])->name("update.linkID");
+Route::get("/admin/update-thumbnail",[VideoController::class, "updateThumbnail"])->name("update.thumbnail");
 
 Route::get("/auth",[AuthController::class, "index"]);
 Route::get("/auth/login",[AuthController::class, "login"])->name("login");

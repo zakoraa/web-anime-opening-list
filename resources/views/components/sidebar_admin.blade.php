@@ -26,8 +26,8 @@
                         <span class="relative z-10">List Opening Anime</span>
                     </div>
                     <ul class="hidden flex-col group-hover:block w-full ml-2 mt-2 py-2 bg-gray-900 text-gray-300">
-                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('video-list') }}">Video List</a> </li>
-                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('add-video') }}">Add Video</a> </li>
+                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('video.list') }}">Video List</a> </li>
+                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('add.video') }}">Add Video</a> </li>
                     </ul>
                 </div>
             </li>
