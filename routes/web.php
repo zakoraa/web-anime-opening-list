@@ -38,6 +38,6 @@ Route::get("/logout",[AuthController::class, "logout"])->name("logout");
 
 Route::group(["middleware" => ["auth"]] ,function(){
     Route::get('/', [HomeController::class, "index"])->name("home")->middleware("auth");
-    Route::get('/watch',  [WatchController::class, "index"]);
+    Route::get('/watch/{id}', [WatchController::class, "index"]);
 });
 

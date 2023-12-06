@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body class="bg-[#101820]">
   @yield('content')
 </body>
 
