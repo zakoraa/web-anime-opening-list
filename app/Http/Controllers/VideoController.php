@@ -17,6 +17,11 @@ class VideoController extends Controller
         return view("admin/video_list", compact("videos"));
     }
 
+    public function addVideo()
+    {
+        return view("admin/add_video");
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -72,14 +77,16 @@ class VideoController extends Controller
     {
         $video = Video::findOrFail($id);
         $video->update($request->all());
-        return redirect(route("video.list"))->with("Success", "Product updated successfully");
+        return redirect(route("video.list"))->with("Success", "Video updated successfully");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Video $video)
+    public function destroy(String $id)
     {
-        //
+        $video = Video::find($id);
+        $video->delete();
+        return redirect(route("video.list"))->with("Success", "Video deleted successfully"); 
     }
 }

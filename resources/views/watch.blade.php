@@ -11,7 +11,7 @@
                 </div>
             </div>
             <h1 class="text-3xl mb-5">{{$video['anime']}} - {{$video['title']}}</h1>
-            <h1 class="text-lg rounded-2xl bg-slate-800 lg:w-1/3 px-5 py-2">Anime : {{$video['anime']}}</h1>
+            <h1 class="text-lg rounded-2xl bg-slate-800 px-5 py-2 inline-block">Anime : {{$video['anime']}}</h1>
         </div>
         <div class="flex  border border-gray-500 flex-col bg-[#101820] rounded-2xl shadow-lg my-10 lg:me-5 lg:w-96 m-5" style=" height: 85vh;">
             <div class="h-28 rounded-t-2xl bg-slate-800 p-5 flex items-center justify-center">
@@ -21,7 +21,7 @@
                 @foreach($videos->shuffle() as $item)
                 <a href="{{ url('watch', $item['id']) }}" class="flex hover:bg-slate-700 hover:cursor-pointer">
                     <div class="relative my-2 ps-4">
-                        <p class="absolute bottom-0 right-0 rounded-md bg-[#000000cc] text-white px-4 py-1 m-1" style="font-size: 8px;">Play</p>
+                        <p class="absolute bottom-0 right-0 rounded-md bg-[#000000cc] text-white px-4 py-1 m-1" style="font-size: 8px;">play</p>
                         <img class="rounded-md" src="{{$item['thumbnail']}}" alt="title" style="max-width: 120px; height: auto;">
                     </div>
                     <div class="p-4">

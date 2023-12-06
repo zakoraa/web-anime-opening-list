@@ -25,6 +25,7 @@ Route::get("/admin/video-list",[VideoController::class, "tableVideo"])->name("vi
 Route::get("/admin/add-video",[VideoController::class, "addVideo"])->name("add.video");
 Route::get("/admin/update-video/{id}",[VideoController::class, "edit"])->name("edit.video");
 Route::put("/admin/update-video/{id}",[VideoController::class, "update"])->name("update.video");
+Route::get("/admin/delete-video/{id}",[VideoController::class, "destroy"])->name("delete.video");
 
 
 Route::get("/auth",[AuthController::class, "index"]);
@@ -36,7 +37,6 @@ Route::get("/logout",[AuthController::class, "logout"])->name("logout");
 
 Route::group(["middleware" => ["auth"]] ,function(){
     Route::get('/', [HomeController::class, "index"])->name("home")->middleware("auth");
-    Route::get('/watch/{id}', [WatchController::class, "show"])->name("watch.by.id");
-    Route::get('/watch', [WatchController::class, "index"])->name("watch");
+    Route::get('/watch/{id}', [WatchController::class, "index"])->name("watch");
 });
 

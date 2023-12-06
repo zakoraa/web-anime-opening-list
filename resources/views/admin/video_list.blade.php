@@ -7,7 +7,7 @@
         <table class="min-w-full table-auto bg-white">
             <thead class="bg-gray-800 text-white">
                 <tr>
-                    <th class="px-4 py-2 border">No</th>
+                    <th class="px-4 py-2 border">Id</th>
                     <th class="px-4 py-2 border">Title</th>
                     <th class="px-4 py-2 border">Anime</th>
                     <th class="px-4 py-2 border">Link ID</th>
@@ -31,14 +31,17 @@
                         <a href="{{ url('admin/update-video', $item['id']) }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline">Edit</a>
                     </td>
                     <td class="border px-4 py-2 flex justify-center">
-                        <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                        <a href="{{ url('admin/delete-video', $item['id']) }}" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</a>
                     </td>
+
                 </tr>
+
                 @endforeach
             </tbody>
         </table>
-    </div>
 
+
+    </div>
 </div>
 
 @endsection

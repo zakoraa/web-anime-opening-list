@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 
 class WatchController extends Controller
 {
-    public function index()
-    {
-        $videos = Video::all();
-        return view('watch', compact('videos'));
-    }
-    public function show($id)
+    public function index($id)
     {
         $video = Video::find($id);
-        return view('watch', compact('video'));
+        $videos = Video::all();
+        return view('watch', compact('video', 'videos'));
     }
 }
