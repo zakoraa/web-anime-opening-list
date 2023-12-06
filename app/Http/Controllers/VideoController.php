@@ -17,30 +17,6 @@ class VideoController extends Controller
         return view("admin/video_list", compact("videos"));
     }
 
-    public function addVideo()
-    {
-        return view("admin/add_video");
-    }
-
-    public function updateTitle()
-    {
-        return view("admin/update_title");
-    }
-
-    public function updateAnime()
-    {
-        return view("admin/update_anime");
-    }
-
-    public function updateLinkID()
-    {
-        return view("admin/update_link_id");
-    }
-    public function updateThumbnail()
-    {
-        view("admin/update_thumbnail");
-    }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -83,17 +59,20 @@ class VideoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Video $video)
+    public function edit($id)
     {
-        //
+        $video = Video::findOrFail($id);
+        return view('admin/update_video', compact('video'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Video $video)
+    public function update(Request $request, String $id)
     {
-        //
+        $video = Video::findOrFail($id);
+        $video->update($request->all());
+        return redirect(route("video.list"))->with("Success", "Product updated successfully");
     }
 
     /**

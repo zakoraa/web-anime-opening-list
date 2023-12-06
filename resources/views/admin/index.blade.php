@@ -32,7 +32,7 @@
     </script>
 
     <script>
-        function togglePopup(popupId) {
+        function togglePopup(popupId, videoId) {
             const popup = document.getElementById(popupId);
             popup.classList.toggle('hidden');
         }
