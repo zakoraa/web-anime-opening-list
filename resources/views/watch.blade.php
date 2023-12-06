@@ -19,17 +19,17 @@
             </div>
             <div class="h-full overflow-y-auto pb-5">
                 @foreach($videos->shuffle() as $item)
-                <div class="flex">
-                    <div class="relative pt-4 ps-4">
+                <a href="{{ url('watch', $item['id']) }}" class="flex hover:bg-slate-700 hover:cursor-pointer">
+                    <div class="relative my-2 ps-4">
                         <p class="absolute bottom-0 right-0 rounded-md bg-[#000000cc] text-white px-4 py-1 m-1" style="font-size: 8px;">Play</p>
                         <img class="rounded-md" src="{{$item['thumbnail']}}" alt="title" style="max-width: 120px; height: auto;">
                     </div>
                     <div class="p-4">
-                        <a href="{{ url('watch', $item['id']) }}" class=" hover:underline text-xs font-semibold line-clamp-2">
+                        <h1 class=" hover:underline text-xs font-semibold line-clamp-2">
                             {{$item['anime']}} - {{$item['title']}}
-                        </a>
+                        </h1>
                     </div>
-                </div>
+                </a>
                 @endforeach
 
 
