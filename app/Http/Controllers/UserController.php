@@ -12,5 +12,11 @@ class UserController extends Controller
         return view("admin/user_table", compact("users"));
     }
 
-    
+    public function destroy(String $id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect(route("user.table"))->with("Success", "User deleted successfully"); 
+    }
+
 }

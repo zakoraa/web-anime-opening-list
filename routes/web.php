@@ -19,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/admin",[UserController::class,"index"])->name("admin");
+Route::get("/admin",[UserController::class,"index"])->name("user.table");
+Route::get("/admin/delete-user/{id}",[UserController::class,"destroy"])->name("delete.user");
+Route::get("/admin/video-table",[VideoController::class, "tableVideo"])->name("video.table");
 Route::post("/admin/add-video",[VideoController::class,"create"])->name("add.video.process");
-Route::get("/admin/video-list",[VideoController::class, "tableVideo"])->name("video.list");
 Route::get("/admin/add-video",[VideoController::class, "addVideo"])->name("add.video");
 Route::get("/admin/update-video/{id}",[VideoController::class, "edit"])->name("edit.video");
 Route::put("/admin/update-video/{id}",[VideoController::class, "update"])->name("update.video");

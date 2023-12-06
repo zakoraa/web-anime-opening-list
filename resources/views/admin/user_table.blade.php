@@ -20,7 +20,7 @@
                     <td class="border px-4 py-2">{{$item["name"]}}</td>
                     <td class="border px-4 py-2">{{$item["email"]}}</td>
                     <td class="border px-4 py-2 flex justify-center">
-                        <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                        <a a href="{{ url('admin/delete-user', $item['id']) }}" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</a>
                     </td>
                 </tr>
                 @endforeach

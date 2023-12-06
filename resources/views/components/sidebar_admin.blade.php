@@ -1,16 +1,16 @@
 <div class="min-h-screen relative w-1/5 bg-gray-900 text-gray-100">
     <div class="p-4 flex items-center justify-between">
         <div class="flex items-center">
-            <div class="relative flex items-center me-5">
+            <a href="https://github.com/zakoraa" class="relative flex items-center me-5">
                 <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="50px">
-            </div>
+            </a>
             <span class="text-xl font-semibold">Admin</span>
         </div>
     </div>
     <nav class="mt-6">
         <ul>
             <li class="mb-4">
-                <a href="{{ route('admin') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
+                <a href="{{ route('user.table') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
                     <svg class="me-3" style="color: white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="white"></path>
                     </svg>
@@ -26,7 +26,7 @@
                         <span class="relative z-10">List Opening Anime</span>
                     </div>
                     <ul class="hidden flex-col group-hover:block w-full ml-2 mt-2 py-2 bg-gray-900 text-gray-300">
-                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('video.list') }}">Video List</a> </li>
+                        <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('video.table') }}">Video Table</a> </li>
                         <li class="cursor-pointer py-2 px-4 hover:bg-gray-800 transition-colors duration-300"><a class="block w-full" href="{{ route('add.video') }}">Add Video</a> </li>
                     </ul>
                 </div>

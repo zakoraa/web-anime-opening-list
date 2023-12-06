@@ -14,7 +14,7 @@ class VideoController extends Controller
     public function tableVideo()
     {
         $videos = Video::all();
-        return view("admin/video_list", compact("videos"));
+        return view("admin/video_table", compact("videos"));
     }
 
     public function addVideo()
@@ -42,7 +42,7 @@ class VideoController extends Controller
 
         Video::create($data);
 
-        return redirect()->route('video.list');
+        return redirect()->route('video.table');
     }
 
     /**
@@ -77,7 +77,7 @@ class VideoController extends Controller
     {
         $video = Video::findOrFail($id);
         $video->update($request->all());
-        return redirect(route("video.list"))->with("Success", "Video updated successfully");
+        return redirect(route("video.table"))->with("Success", "Video updated successfully");
     }
 
     /**
@@ -87,6 +87,6 @@ class VideoController extends Controller
     {
         $video = Video::find($id);
         $video->delete();
-        return redirect(route("video.list"))->with("Success", "Video deleted successfully"); 
+        return redirect(route("video.table"))->with("Success", "Video deleted successfully"); 
     }
 }
