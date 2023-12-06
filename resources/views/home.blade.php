@@ -67,9 +67,14 @@
     <div class="swiper w-full absolute -top-72" data-aos="fade-up" data-aos-duration="1000">
         <div class="swiper-wrapper h-screen">
             @foreach($videos->shuffle() as $item)
-            <div class="swiper-slide">
-                <img class="rounded-3xl h-72 object-cover w-full" src="{{$item['thumbnail']}}" />
-                <div class="absolute inset-x-0 bottom-0 h-full pb-8 px-5 flex items-end text-center justify-center text-white text-xl font-bold  bg-gradient-to-t from-[#101820e1] to-transparent ">{{$item['anime']}} - {{$item['title']}}</div>
+            <div class="swiper-slide relative">
+                <a href="{{ url('watch', $item['id']) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
+                    <img class="rounded-3xl h-72 object-cover w-full" src="{{$item['thumbnail']}}" />
+                    <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent opacity-100 hover:opacity-0 transition-opacity duration-300">
+                    </div>
+                    <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{$item['anime']}} - {{$item['title']}}</h1>
+                </a>
+
             </div>
             @endforeach
         </div>
