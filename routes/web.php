@@ -40,4 +40,3 @@ Route::group(["middleware" => ["auth"]] ,function(){
     Route::get('/', [HomeController::class, "index"])->name("home")->middleware("auth");
     Route::get('/watch/{id}', [WatchController::class, "index"])->name("watch");
 });
-
