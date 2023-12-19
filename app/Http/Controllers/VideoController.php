@@ -37,7 +37,7 @@ class VideoController extends Controller
 
         Video::create($data);
 
-        return redirect(route('video_table'));
+        return redirect(route("videos.index"))->with("success", "Video created successfully");
     }
 
     /**
@@ -45,7 +45,6 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -53,7 +52,6 @@ class VideoController extends Controller
      */
     public function show(Video $video)
     {
-        //
     }
 
     /**
@@ -69,8 +67,23 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video)
     {
-        Video::where('id', $video->id)->update($request->all());
-        return redirect(route("video_table"))->with("Success", "Video updated successfully");
+        $validated = $request->validate([
+            "title" => "required",
+            "anime" => "required",
+            "link_id" => "required",
+            "thumbnail" => "required"
+        ]);
+
+        $values = array(
+            "title" => $request->title,
+            "anime" => $request->anime,
+            "link_id" => $request->link_id,
+            "thumbnail" => $request->thumbnail
+        );
+
+        Video::where('id', $video->id)->update($values);
+
+        return redirect(route("videos.index"))->with("success", "Video updated successfully");
     }
 
     /**
@@ -78,7 +91,12 @@ class VideoController extends Controller
      */
     public function destroy(Video $video)
     {
-        Video::where('id', $video->id)->delete();
-        return redirect(route("video_table"))->with("Success", "Video deleted successfully");
+        Video::find($video->id)->delete();
+        return redirect(route("videos.index"))->with("success", "Video deleted successfully");
+    }
+
+    public function addVideo()
+    {
+        return view("admin/add_video");
     }
 }

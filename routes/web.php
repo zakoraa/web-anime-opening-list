@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/admin",[UserController::class,"index"])->name("user.table");
 Route::get("/admin/delete-user/{id}",[UserController::class,"destroy"])->name("delete.user");
+Route::get('admin/videos/add', [VideoController::class, "addVideo"])->name("videos.add");
 Route::resource('admin/videos', VideoController::class);
 
 

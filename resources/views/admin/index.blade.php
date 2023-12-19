@@ -15,6 +15,7 @@
 </head>
 
 <body class="flex min-h-screen bg-gray-200 text-white">
+
     @include('components.sidebar_admin')
 
     @yield('content')

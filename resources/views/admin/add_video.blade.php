@@ -4,8 +4,10 @@
 
 <div class="mt-6 mx-auto text-black">
     <h1 class="font-bold text-xl text-center mb-4">Add Video Anime</h1>
-    <form action="{{route('add.video.process')}}" method="POST">
+    <form action="{{route('videos.create')}}" method="POST">
         @csrf
+        @method("GET")
+
         <div class="mb-4">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" class="border w-full border-gray-300 rounded-md py-2 px-4" placeholder="Enter Title"><br>

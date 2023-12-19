@@ -31,7 +31,12 @@
                         <a href="{{ route('videos.edit', $item['id']) }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-7 rounded focus:outline-none focus:shadow-outline">Edit</a>
                     </td>
                     <td class="border px-4 py-2 flex justify-center">
-                        <a href="{{ route('videos.destroy', $item['id']) }}" onsubmit="return confirm();" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Delete</a>
+                        <form action="{{ route('videos.destroy', $item['id']) }}" method="POST" onsubmit="return confirm('Are you sure to delete this video?');" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit">Delete</button>
+                        </form>
                     </td>
 
                 </tr>
