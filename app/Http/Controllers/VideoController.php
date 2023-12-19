@@ -11,15 +11,10 @@ class VideoController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function tableVideo()
+    public function index()
     {
         $videos = Video::all();
         return view("admin/video_table", compact("videos"));
-    }
-
-    public function addVideo()
-    {
-        return view("admin/add_video");
     }
 
     /**
@@ -42,7 +37,7 @@ class VideoController extends Controller
 
         Video::create($data);
 
-        return redirect()->route('video.table');
+        return redirect(route('video_table'));
     }
 
     /**
@@ -64,29 +59,26 @@ class VideoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Video $video)
     {
-        $video = Video::findOrFail($id);
-        return view('admin/update_video', compact('video'));
+        return view('admin/update_video', ['video' => $video]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, String $id)
+    public function update(Request $request, Video $video)
     {
-        $video = Video::findOrFail($id);
-        $video->update($request->all());
-        return redirect(route("video.table"))->with("Success", "Video updated successfully");
+        Video::where('id', $video->id)->update($request->all());
+        return redirect(route("video_table"))->with("Success", "Video updated successfully");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(String $id)
+    public function destroy(Video $video)
     {
-        $video = Video::find($id);
-        $video->delete();
-        return redirect(route("video.table"))->with("Success", "Video deleted successfully"); 
+        Video::where('id', $video->id)->delete();
+        return redirect(route("video_table"))->with("Success", "Video deleted successfully");
     }
 }

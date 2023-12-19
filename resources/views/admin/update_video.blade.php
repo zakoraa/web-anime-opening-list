@@ -4,7 +4,7 @@
 
 <div class="mt-6 mx-auto text-black">
     <h1 class="font-bold text-xl text-center mb-4">Update Video</h1>
-    <form action="{{ route('update.video', $video->id) }}" method="POST">
+    <form action="{{ route('videos.edit', $video->id) }}" method="POST">
         @csrf
         @method('PUT')
 
