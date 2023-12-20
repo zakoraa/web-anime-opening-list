@@ -5,14 +5,14 @@
 @include('components.navbar')
 
 <div class="bg-[#101820]">
-    <section id="header">
+    <section id="#">
         <div class="min-h-screen w-full relative text-white">
             <img class="w-full min-h-screen object-cover" src="{{ asset('storage/jujutsu.gif') }}" alt="jujutsu" />
             <div class="absolute top-0 left-0 w-full h-full bg-[#0000006c] font-extrabold  flex-col flex justify-center items-center lg:items-start px-10 lg:px-20">
-                <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
+                <div class="text-4xl text-center lg:text-7xl mb-5 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
                     Explore Your World
                 </div>
-                <div class="text-4xl text-center lg:text-7xl mb-10 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
+                <div class="text-4xl text-center lg:text-7xl mb-5 lg:mb-10" data-aos="fade-up" data-aos-duration="3000">
                     Find Your Favorite Anime
                 </div>
                 <div class="text-4xl text-center lg:text-7xl" data-aos="fade-up" data-aos-duration="3000">
@@ -23,11 +23,11 @@
     </section>
 
 
-    <section id="trending">
+    <section id="top_anime">
         <div class="bg-[#101820] w-full text-white text-center ">
-            <div class="p-20 text-5xl font-extrabold" data-aos="fade-up" data-aos-duration="1000">
-                <div class="mb-5">Top 3 </div>
-                <div class="mb-5">Most Popular</div>
+            <div class="p-20 lg:text-5xl text-4xl font-extrabold" data-aos="fade-up" data-aos-duration="1000">
+                <div class="lg:mb-5 mb-3">Top 3</div>
+                <div class="lg:mb-5 mb-3">Most Popular</div>
                 <div class=" mb-16">Anime Openings</div>
             </div>
 
@@ -57,14 +57,14 @@
 
 <section id="swiper">
     <div class="w-full flex justify-start items-center flex-col">
-        <div class="relative flex justify-start items-start">
-            <img class="w-screen h-auto -translate-y-24" src="{{ asset('storage/anime.jpg') }}" alt="foryou" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
-            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -top-24" style="border-bottom-left-radius: 100px; border-bottom-right-radius: 100px;">
-                <p class="text-white text-7xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
+        <div class="relative flex justify-start items-start ">
+            <img class="w-screen h-auto -translate-y-24 lg:rounded-bl-3xl lg:rounded-br-3xl rounded-none" src="{{ asset('storage/anime.jpg') }}" alt="foryou">
+            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -top-24 lg:rounded-bl-3xl lg:rounded-br-3xl rounded-none">
+                <p class="text-white lg:text-7xl text-5xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
             </div>
         </div>
     </div>
-    <div class="swiper w-full absolute -top-72" data-aos="fade-up" data-aos-duration="1000">
+    <div class="swiper w-full absolute lg:-top-72 -top-32" data-aos="fade-up" data-aos-duration="1000">
         <div class="swiper-wrapper h-screen">
             @foreach($videos->shuffle() as $item)
             <div class="swiper-slide relative">
@@ -80,7 +80,6 @@
         </div>
         <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
         <div class="swiper-button-next bg-white p-6 rounded-full"></div>
-    </div>
     </div>
 </section>
 </div>

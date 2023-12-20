@@ -6,20 +6,20 @@
     </a>
 
     <div class="hidden sm:flex items-center justify-evenly w-full ">
-      <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
+      <a href="#" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           Home
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </span></h1>
-      <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
-          Trending Now
-          <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </span></h1>
-      <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
+        </span></a>
+      <a href="#top_anime" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           Top Anime
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </span></h1>
+        </span></a>
+      <a href="#swiper" class="font-semibold relative cursor-pointer"><span class="group inline-block">
+          For You
+          <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+        </span></a>
       <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
-          About
+          Settings
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></h1>
       @auth
