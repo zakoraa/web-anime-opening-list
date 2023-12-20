@@ -6,7 +6,7 @@
     <div class="min-w-screen min-h-screen lg:flex relative">
         <div class="m-10" style="flex: 2;">
             <div class="video-wrapper flex justify-start items-center mb-5">
-                <div class="iframe-container w-full lg:pb-[56.25%] pb-[100%] relative">
+                <div class="aspect-video  iframe-container w-full relative">
                     <iframe class="shadow-slate-700 shadow-2xl rounded-lg absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/{{$video['link_id']}}" allowfullscreen title="YouTube Video"></iframe>
                 </div>
             </div>

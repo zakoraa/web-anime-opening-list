@@ -31,7 +31,9 @@
                     </ul>
                 </div>
             </li>
-            <a href="#" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
+
+            @auth
+            <a href="{{ route('logout') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
                 <svg class="me-3" fill="#FFFFFF" height="18px" width="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-38.5 -38.5 461.97 461.97" xml:space="preserve" stroke="#FFFFFF" stroke-width="20.403463000000002" transform="rotate(0)">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.309826"></g>
@@ -53,6 +55,7 @@
                 <span>Logout</span>
                 <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </a>
+            @endauth
             </li>
         </ul>
     </nav>

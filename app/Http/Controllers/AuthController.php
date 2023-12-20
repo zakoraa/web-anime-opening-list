@@ -13,7 +13,12 @@ class AuthController extends Controller
     function login()
     {
         if (Auth::check()) {
-            return redirect(route("home"));
+            $user = Auth::user();
+            if ($user->role === 'admin') {
+                return redirect(route("user.table"));
+            } else {
+                return redirect(route("home"));
+            }
         } else {
             return view("/auth/login");
         }
@@ -22,7 +27,12 @@ class AuthController extends Controller
     function signup()
     {
         if (Auth::check()) {
-            return redirect(route("home"));
+            $user = Auth::user();
+            if ($user->role === 'admin') {
+                return redirect(route("user.table"));
+            } else {
+                return redirect(route("home"));
+            }
         } else {
             return view("/auth/signup");
         }
@@ -45,7 +55,12 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($loginInfo)) {
-            return redirect(route("home"))->with("success", "Login success");
+            $user = Auth::user();
+            if ($user->role === 'admin') {
+                return redirect(route("user.table"))->with("success", "Login success");
+            } else {
+                return redirect(route("home"))->with("success", "Login success");
+            }
         } else {
             return redirect(route("login"))->with("error", "Your email or password is wrong");
         }

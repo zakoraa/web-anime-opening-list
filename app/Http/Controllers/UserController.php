@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    function index(){
-        $users = User::all();
+    function index()
+    {
+        $users = User::where('role', 'user')->get();
         return view("admin/user_table", compact("users"));
     }
 
@@ -16,7 +17,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect(route("user.table"))->with("Success", "User deleted successfully"); 
+        return redirect(route("user.table"))->with("Success", "User deleted successfully");
     }
-
 }
