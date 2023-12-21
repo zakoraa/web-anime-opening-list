@@ -1,7 +1,7 @@
 <div class="min-h-screen relative w-1/5 bg-gray-900 text-gray-100">
     <div class="p-4 flex items-center justify-between">
         <div class="flex items-center">
-            <a href="https://github.com/zakoraa" class="relative flex items-center me-5">
+            <a href="https://linktr.ee/raflisilehu" class="relative flex items-center me-5" target="_blank">
                 <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="50px">
             </a>
             <span class="text-xl font-semibold">Admin</span>
@@ -10,7 +10,16 @@
     <nav class="mt-6">
         <ul>
             <li class="mb-4">
-                <a href="{{ route('user.table') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
+                <a href="{{ route('user.index') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
+                    <svg class="me-3" style="color: white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="white"></path>
+                    </svg>
+                    <span>Admin</span>
+                    <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+            </li>
+            <li class="mb-4">
+                <a href="{{ route('user.user') }}" class="group flex items-center text-gray-300 hover:text-white py-2 px-4 relative">
                     <svg class="me-3" style="color: white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="white"></path>
                     </svg>

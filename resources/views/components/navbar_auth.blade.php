@@ -1,5 +1,5 @@
 <div class="absolute w-full top-0 left-0 flex justify-between items-center h-20 px-5 lg:px-20">
-    <a href="https://github.com/zakoraa">
+    <a href="https://linktr.ee/raflisilehu" target="_blank">
         <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="70px">
     </a>
     <div class="flex w-52 lg:w-56 justify-between">

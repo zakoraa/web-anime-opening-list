@@ -36,6 +36,7 @@ Route::group(["middleware" => ["auth", 'role:admin,user']], function () {
 
     Route::middleware('role:admin')->group(function () {
         Route::get("/admin", [UserController::class, "index"])->name("user.index");
+        Route::get("/admin/users", [UserController::class, "user"])->name("user.user");
         Route::get("/admin/delete-user/{id}", [UserController::class, "destroy"])->name("user.delete");
         Route::get('admin/videos/add', [VideoController::class, "addVideo"])->name("videos.add");
         Route::resource('admin/videos', VideoController::class);

@@ -32,10 +32,11 @@
   AOS.init();
 </script>
 <script>
-    function closeAlert() {
-        var alert = document.getElementById('myAlert');
-        alert.style.display = 'none';
-    }
+  function closeAlert() {
+    var alert = document.getElementById('myAlert');
+    alert.style.display = 'none';
+  }
 </script>
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
 </html>

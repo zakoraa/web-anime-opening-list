@@ -1,7 +1,7 @@
 <!-- bg-[#101820] -->
 <nav id="navbar" class="top-0 left-0 h-24 text-white fixed w-full z-50 ease-in-out transition-colors" data-aos="fade-down" data-aos-duration="1000">
   <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-16 h-full  flex items-center">
-    <a href="https://github.com/zakoraa" class="relative flex items-center me-2">
+    <a href="https://linktr.ee/raflisilehu" class="relative flex items-center me-2" target="_blank">
       <img class="rounded-full border-2 border-white" src="{{ asset('storage/Z.jpg') }}" alt="hallo" width="70px">
     </a>
 

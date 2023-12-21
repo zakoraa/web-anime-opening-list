@@ -15,7 +15,7 @@ class AuthController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             if ($user->role === 'admin') {
-                return redirect(route("user.table"));
+                return redirect(route("user.index"));
             } else {
                 return redirect(route("home"));
             }
@@ -29,7 +29,7 @@ class AuthController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             if ($user->role === 'admin') {
-                return redirect(route("user.table"));
+                return redirect(route("user.index"));
             } else {
                 return redirect(route("home"));
             }
@@ -57,7 +57,7 @@ class AuthController extends Controller
         if (Auth::attempt($loginInfo)) {
             $user = Auth::user();
             if ($user->role === 'admin') {
-                return redirect(route("user.table"))->with("success", "Login success");
+                return redirect(route("user.index"))->with("success", "Login success");
             } else {
                 return redirect(route("home"))->with("success", "Login success");
             }
