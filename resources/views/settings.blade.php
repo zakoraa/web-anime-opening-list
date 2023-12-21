@@ -7,20 +7,38 @@
         </svg>
     </span></h1>
 <div class="max-w-md mx-auto bg-gray-700 rounded-lg shadow-md p-10">
-    <form>
+    <form action="{{ route('user.update') }}" method="POST" onsubmit="return confirm('Are you sure to change your data?');">
+        @csrf
+
         <div class="mb-4">
             <label for="username" class="block text-white text-sm font-semibold mb-2">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your new username" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            <input value="{{ Auth::user()->name }}" type="text" id="username" name="name" placeholder="Enter your new username" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
         </div>
         <div class="mb-4">
             <label for="email" class="block text-white text-sm font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your new email" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            <input value="{{ Auth::user()->email }}" type="email" id="email" name="email" placeholder="Enter your new email" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
         </div>
         <div class="mb-6">
             <label for="password" class="block text-white text-sm font-semibold mb-2">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your new password" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
         </div>
-        <button type="submit" class="w-full bg-blue-950 hover:bg-blue-900 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Register</button>
+        <button type="submit" class="w-full bg-blue-950 hover:bg-blue-900 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Save</button>
     </form>
+    <div id="popup-modal" tabindex="-1" class="{{ session('success') ? 'flex' : 'hidden' }} fixed inset-0 z-50 items-center justify-center bg-gray-900 bg-opacity-50">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button id="closeModal" type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-4 md:p-5 text-center flex flex-col justify-center items-center">
+                    <dotlottie-player src="https://lottie.host/21ada2d0-b792-418a-918d-9c16692b6512/P1wwPYejCq.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Successfully updated your profile</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

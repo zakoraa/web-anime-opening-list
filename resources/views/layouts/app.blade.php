@@ -27,6 +27,7 @@
 
 <script src="{{ asset('js/swiper.js') }}"></script>
 <script src="{{ asset('js/navbar.js') }}"></script>
+<script src="{{ asset('js/modal.js') }}"></script>
 <script>
   AOS.init();
 </script>
@@ -36,5 +37,5 @@
         alert.style.display = 'none';
     }
 </script>
-
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 </html>
