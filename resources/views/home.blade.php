@@ -55,66 +55,55 @@
 </div>
 </section>
 
-<section id="swiper">
+<section id="for_you">
     <div class="w-full flex justify-start items-center flex-col">
         <div class="relative flex justify-start items-start ">
-            <img class="w-screen h-auto -translate-y-24 lg:rounded-bl-3xl lg:rounded-br-3xl rounded-none" src="{{ asset('storage/anime.jpg') }}" alt="foryou">
+            <img class="w-screen lg:h-auto h-96 object-cover -translate-y-24 lg:rounded-bl-3xl lg:rounded-br-3xl rounded-bl-xl rounded-br-xl rounded-none" src="{{ asset('storage/anime.jpg') }}" alt="foryou">
             <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t to-[#101820] from-transparent flex justify-center items-center -top-24 lg:rounded-bl-3xl lg:rounded-br-3xl rounded-none">
-                <p class="text-white lg:text-7xl text-5xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
+                <p class="text-white lg:text-7xl text-6xl font-extrabold mb-16 " data-aos="fade-up" data-aos-duration="1000">For You</p>
             </div>
         </div>
     </div>
-    <div class="swiper w-full absolute lg:-top-72 -top-32 mb-16" data-aos="fade-up" data-aos-duration="1000">
-        <div class="swiper-wrapper h-screen">
-            @foreach($videos->shuffle() as $item)
-            <div class="swiper-slide relative">
-                <a href="{{ url('watch', $item['id']) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
-                    <img class="rounded-3xl h-52 object-cover w-full" src="{{$item['thumbnail']}}" />
-                    <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent">
-                    </div>
-                    <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{$item['anime']}} - {{$item['title']}}</h1>
-                </a>
+    <div id="swiper" class="px-4">
+        <div class="swiper w-full absolute lg:-top-72 -top-44 mb-16" data-aos="fade-up" data-aos-duration="1000">
+            <div class="swiper-wrapper h-screen">
+                @foreach($videos->shuffle() as $item)
+                <div class="swiper-slide relative py-4">
+                    <a href="{{ url('watch', $item['id']) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
+                        <img class="rounded-3xl h-52 object-cover w-full" src="{{$item['thumbnail']}}" />
+                        <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent">
+                        </div>
+                        <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{$item['anime']}} - {{$item['title']}}</h1>
+                    </a>
 
+                </div>
+                @endforeach
             </div>
-            @endforeach
+            <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
+            <div class="swiper-button-next bg-white p-6 rounded-full"></div>
         </div>
-        <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
-        <div class="swiper-button-next bg-white p-6 rounded-full"></div>
-    </div>
-    <div class="swiper w-full absolute lg:-top-72 -top-32 mb-16" data-aos="fade-up" data-aos-duration="1000">
-        <div class="swiper-wrapper h-screen">
-            @foreach($videos->shuffle() as $item)
-            <div class="swiper-slide relative">
-                <a href="{{ url('watch', $item['id']) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
-                    <img class="rounded-3xl h-52 object-cover w-full" src="{{$item['thumbnail']}}" />
-                    <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent">
-                    </div>
-                    <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{$item['anime']}} - {{$item['title']}}</h1>
-                </a>
+        @foreach($videos->groupBy('anime') as $animeName => $animeVideos)
+        <div class="swiper w-full absolute lg:-top-72 -top-44 mb-16" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-white font-bold text-4xl mb-2 lg:text-start text-center">{{ $animeName }}</h1>
+            <div class="swiper-wrapper h-screen">
+                @foreach($animeVideos as $item)
+                <div class="swiper-slide relative py-4">
+                    <a href="{{ url('watch', $item->id) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
+                        <img class="rounded-3xl h-52 object-cover w-full" src="{{ $item->thumbnail }}" />
+                        <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent">
+                        </div>
+                        <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{ $item->anime }} - {{ $item->title }}</h1>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+            <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
+            <div class="swiper-button-next bg-white p-6 rounded-full"></div>
+        </div>
+        @endforeach
 
-            </div>
-            @endforeach
-        </div>
-        <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
-        <div class="swiper-button-next bg-white p-6 rounded-full"></div>
     </div>
-    <div class="swiper w-full absolute lg:-top-72 -top-32" data-aos="fade-up" data-aos-duration="1000">
-        <div class="swiper-wrapper h-screen">
-            @foreach($videos->shuffle() as $item)
-            <div class="swiper-slide relative">
-                <a href="{{ url('watch', $item['id']) }}" class="relative block hover:scale-105 transition-transform duration-300 transform">
-                    <img class="rounded-3xl h-52 object-cover w-full" src="{{$item['thumbnail']}}" />
-                    <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#101820b7] to-transparent">
-                    </div>
-                    <h1 class="absolute inset-x-0 bottom-0 h-full flex items-end text-center justify-center text-white text-xl font-bold pb-8 px-5">{{$item['anime']}} - {{$item['title']}}</h1>
-                </a>
 
-            </div>
-            @endforeach
-        </div>
-        <div class="swiper-button-prev bg-white p-6 rounded-full"></div>
-        <div class="swiper-button-next bg-white p-6 rounded-full"></div>
-    </div>
 </section>
 </div>
 

@@ -14,7 +14,7 @@
           Top Anime
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></a>
-      <a href="#swiper" class="font-semibold relative cursor-pointer"><span class="group inline-block">
+      <a href="#for_you" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           For You
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></a>
@@ -68,7 +68,7 @@
             Top Anime
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></a>
-        <a href="#swiper" class="relative cursor-pointer mb-5"><span class="group inline-block">
+        <a href="#for_you" class="relative cursor-pointer mb-5"><span class="group inline-block">
             For You
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></a>

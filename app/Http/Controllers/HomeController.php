@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function index(){
+    function index()
+    {
         $videos  = Video::all();
         return view("/home", compact("videos"));
     }
