@@ -15,7 +15,7 @@ class RedirectIfRole
         foreach ($roles as $role) {
             if ($user && $user->role === $role) {
                 if ($role === 'admin' && $request->path() === '/') {
-                    return redirect()->route('user.table');
+                    return redirect()->route('user.index');
                 } else if ($role === 'user' && strpos($request->path(), 'admin') === 0) {
                     return redirect()->route('home');
                 }
