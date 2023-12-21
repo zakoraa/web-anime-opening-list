@@ -17,9 +17,9 @@ const swiper = new Swiper(".swiper", {
     },
     breakpoints: {
         728: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
+            slidesPerView: 4,
+            spaceBetween: 10,
+            slidesPerGroup: 4,
         },
     },
 });
