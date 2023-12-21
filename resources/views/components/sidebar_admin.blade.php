@@ -1,4 +1,4 @@
-<div class="min-h-screen relative w-1/5 bg-gray-900 text-gray-100">
+<div class="h-screen relative w-1/5 bg-gray-900 text-gray-100">
     <div class="p-4 flex items-center justify-between">
         <div class="flex items-center">
             <a href="https://linktr.ee/raflisilehu" class="relative flex items-center me-5" target="_blank">

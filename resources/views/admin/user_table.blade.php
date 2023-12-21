@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="flex-1">
+<div class="flex-1 h-screen overflow-y-scroll">
     <div class="overflow-x-auto">
         <table class="min-w-full table-auto bg-white">
             <thead class="bg-gray-800 text-white">

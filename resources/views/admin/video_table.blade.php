@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="flex-1 ">
+<div class="flex-1 h-screen overflow-y-scroll">
     <div class="overflow-x-auto">
         <table class="min-w-full table-auto bg-white">
             <thead class="bg-gray-800 text-white">
@@ -21,7 +21,7 @@
                     <td class="border px-4 py-2">{{$item["id"]}}</td>
                     <td class="border px-4 py-2">{{$item["title"]}}</td>
                     <td class="border px-4 py-2">{{$item["anime"]}}</td>
-                    <td class="border px-4 py-2">{{$item["link_id"]}}</td>
+                    <td class="border px-4 py-2 text-sm">{{$item["link_id"]}}</td>
                     <td class="border px-4 py-2">
                         <div class="flex justify-center ">
                             <img src="{{$item['thumbnail']}}" alt="thumbnail" width="150">
@@ -38,9 +38,7 @@
                             <button type="submit">Delete</button>
                         </form>
                     </td>
-
                 </tr>
-
                 @endforeach
             </tbody>
         </table>
