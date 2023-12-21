@@ -35,5 +35,6 @@
 
             </div>
         </div>
-
-        @endsection
+    </div>
+</section>
+@endsection

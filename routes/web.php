@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
 Route::get("/auth", [AuthController::class, "index"]);
 Route::get("/auth/login", [AuthController::class, "login"])->name("login");
 Route::post("/auth/login", [AuthController::class, "loginProcess"])->name("login.process");
@@ -32,6 +29,9 @@ Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 Route::group(["middleware" => ["auth", 'role:admin,user']], function () {
     Route::get('/', [HomeController::class, "index"])->name("home");
     Route::get('/watch/{id}', [WatchController::class, "index"])->name("watch");
+    Route::get('/settings', function () {
+        return view("settings");
+    });
 
     Route::middleware('role:admin')->group(function () {
         Route::get("/admin", [UserController::class, "index"])->name("user.table");

@@ -18,10 +18,10 @@
           For You
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></a>
-      <h1 class="font-semibold relative cursor-pointer"><span class="group inline-block">
+      <a href="/settings" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           Settings
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </span></h1>
+        </span></a>
       @auth
       <a href="{{ route('logout') }}" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           <div class="flex justify-center items-center"> Logout <svg class="ms-2" fill="#FFFFFF" height="18px" width="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-38.5 -38.5 461.97 461.97" xml:space="preserve" stroke="#FFFFFF" stroke-width="20.403463000000002" transform="rotate(0)">
@@ -59,14 +59,14 @@
       </button>
     </div>
 
-    <!-- <div class="sm:hidden lg:hidden md:hidden" id="mobile-menu">
+    <div class="absolute top-0 left-0 bg-[#101820] mt-24 min-w-full fixed-top sm:hidden lg:hidden md:hidden" id="mobile-menu">
       <div class="flex flex-col items-center py-4">
         <a href="#" class="text-white block py-2">Home</a>
         <a href="#" class="text-white block py-2">Trending Now</a>
         <a href="#" class="text-white block py-2">Top Anime</a>
         <a href="#" class="text-white block py-2">About</a>
-      </div> -->
-  </div>
+      </div>
+    </div>
 
   </div>
 
