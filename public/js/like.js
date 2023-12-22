@@ -48,11 +48,14 @@ function getCSRFToken() {
 
 document.addEventListener("DOMContentLoaded", function () {
     var img = document.getElementById("favoriteImg");
-    var videoId = "$video['id']";
-    fetch(`/videos/${1}/check-favorite-status`)
+
+    var currentURL = window.location.href;
+    var urlParts = currentURL.split("/");
+    var videoId = urlParts[urlParts.length - 1];
+
+    fetch(`/videos/${videoId}/check-favorite-status`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.isFavorite);
             if (data.isFavorite) {
                 img.src = "/storage/favorite_red.png";
             }

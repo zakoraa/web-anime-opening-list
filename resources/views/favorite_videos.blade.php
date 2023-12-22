@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-white font-semibold text-5xl text-center mt-5 mb-16">Your Favorite Movies</h1>
+<h1 class="text-white font-semibold lg:text-5xl text-3xl text-center mt-5 mb-16">Your Favorite Movies</h1>
 
+@if(count($favoriteVideos) > 0)
 <div class="wrap gap-x-5 mx-5 grid lg:grid-cols-4 grid-cols-1 text-center items-center justify-center">
     @foreach($favoriteVideos as $video)
     <div class="lg:w-72 w-full" data-aos="fade-up" data-aos-duration="1000">
@@ -17,5 +18,8 @@
     </div>
     @endforeach
 </div>
+@else
+<h1 class="text-gray-600 text-lg mx-auto text-center mt-5 mb-16">No videos</h1>
+@endif
 
 @endsection
