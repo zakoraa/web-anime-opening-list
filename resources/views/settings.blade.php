@@ -7,7 +7,7 @@
         </svg>
     </span></h1>
 <div class="max-w-md mx-auto bg-gray-700 rounded-lg shadow-md p-10">
-    <form action="{{ route('user.update') }}" method="POST" onsubmit="return confirm('Are you sure to change your data?');">
+    <form action="{{ route('user.update') }}" method="POST" onsubmit="return confirm('Are you sure you want to change your data?');">
         @csrf
 
         <div class="mb-4">
@@ -47,7 +47,6 @@
                     <dotlottie-player src="https://lottie.host/21ada2d0-b792-418a-918d-9c16692b6512/P1wwPYejCq.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
                     <h3 class="mb-5 text-lg font-normal text-white">{{ session('success') }}</h3>
                     <a href="{{route('home')}}" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Back to home</a>
-
                 </div>
             </div>
         </div>

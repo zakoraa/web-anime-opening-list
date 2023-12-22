@@ -45,9 +45,9 @@ class AuthController extends Controller
             "email" => "required",
             "password" => "required"
         ], [
-            "email.required" => "Email must be filled in",
+            "email.required" => "Email is required",
             "email.email" => "Invalid email format",
-            "password.required" => "Password must be filled in"
+            "password.required" => "Password is required"
         ]);
 
         $loginInfo = [
@@ -71,9 +71,15 @@ class AuthController extends Controller
     {
 
         $request->validate([
-            "name" => "required",
+            "name" => "required:min3",
             "email" => "required|email|unique:users",
             "password" => "required",
+        ], [
+            "name.required" => "Username is required",
+            "name.min" => "Username must be at least 3 characters",
+            "email.required" => "Email is required",
+            "email.email" => "Invalid email format",
+            "password" => "Password is required"
         ]);
 
         $data["name"] = $request->name;
@@ -86,7 +92,7 @@ class AuthController extends Controller
             return redirect(route("signup"))->with("error", "Signup failed, try again!");
         }
 
-        return redirect(route("login"))->with("Success", "Signup success");
+        return redirect(route("login"))->with("success", "Signup success");
     }
 
     function logout()

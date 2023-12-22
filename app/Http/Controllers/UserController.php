@@ -20,11 +20,12 @@ class UserController extends Controller
         $user = User::find(Auth::user()->id);
 
         $validatedData = $request->validate([
-            "name" => "required",
+            "name" => "required|min:3",
             "email" => "required|email",
         ], [
-            "name.required" => "Username must be filled in",
-            "email.required" => "Email must be filled in",
+            "name.required" => "Username is required",
+            "name.min" => "Username must be at least 3 characters",
+            "email.required" => "Email is required",
             "email.email" => "Invalid email format",
         ]);
 
@@ -44,6 +45,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect(route("user.table"))->with("Success", "User deleted successfully");
+        return redirect(route("user.index"))->with("success", "User successfully deleted");
     }
 }
