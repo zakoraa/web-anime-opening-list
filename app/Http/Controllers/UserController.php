@@ -25,16 +25,25 @@ class UserController extends Controller
     {
         $user = User::find(Auth::user()->id);
 
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
+        $validatedData = $request->validate([
+            "name" => "required",
+            "email" => "required|email",
+        ], [
+            "name.required" => "Username must be filled in",
+            "email.required" => "Email must be filled in",
+            "email.email" => "Invalid email format",
+        ]);
 
-        if ($request->filled('password')) {
-            $user->password = Hash::make($request->input('password'));
+        $user->name = $validatedData["name"];
+        $user->email = $validatedData["email"];
+
+        if ($request->filled("password")) {
+            $user->password = Hash::make($request->input("password"));
         }
 
         $user->save();
 
-        return redirect()->back()->with('success', 'Profile updated successfully.');
+        return redirect()->back()->with("success", "Successfully updated your profile");
     }
 
     public function destroy(String $id)

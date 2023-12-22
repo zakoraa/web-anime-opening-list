@@ -10,9 +10,15 @@
                 @csrf
                 <div class="mb-10">
                     <input type="email" id="email" name="email" class="w-full px-5 py-4 lg:px-5 lg:py-6 mb-6 rounded-3xl  focus:outline-none " placeholder="Email" required style="background-color: #0000009c;">
+                    @error('email')
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
                 </div>
                 <div class="mb-10">
                     <input type="password" id="password" name="password" class="w-full px-5 py-4 lg:px-5 lg:py-6 mb-6 rounded-3xl focus:outline-none " placeholder="Password" required style="background-color: #0000009c;">
+                    @error('password')
+                    <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
                 </div>
                 <button type="submit" class="w-full rounded-3xl py-4 lg:py-6" style="background-color: #101820; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#374151';" onmouseout="this.style.backgroundColor='#101820';">
                     Login

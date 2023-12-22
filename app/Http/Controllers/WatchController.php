@@ -10,6 +10,6 @@ class WatchController extends Controller
     {
         $video = Video::find($id);
         $videos = Video::all();
-        return view('watch', compact('video', 'videos'));
+        return view("watch", compact("video", "videos"));
     }
 }

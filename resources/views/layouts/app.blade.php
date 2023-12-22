@@ -30,6 +30,7 @@
 <script src="{{ asset('js/swiper.js') }}"></script>
 <script src="{{ asset('js/navbar.js') }}"></script>
 <script src="{{ asset('js/modal.js') }}"></script>
+<script src="{{ asset('js/like.js') }}"></script>
 <script>
   AOS.init();
 </script>

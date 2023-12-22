@@ -59,7 +59,7 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        return view('admin/update_video', ['video' => $video]);
+        return view("admin/update_video", ["video" => $video]);
     }
 
     /**
@@ -81,7 +81,7 @@ class VideoController extends Controller
             "thumbnail" => $request->thumbnail
         );
 
-        Video::where('id', $video->id)->update($values);
+        Video::where("id", $video->id)->update($values);
 
         return redirect(route("videos.index"))->with("success", "Video updated successfully");
     }

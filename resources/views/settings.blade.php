@@ -13,17 +13,27 @@
         <div class="mb-4">
             <label for="username" class="block text-white text-sm font-semibold mb-2">Username</label>
             <input value="{{ Auth::user()->name }}" type="text" id="username" name="name" placeholder="Enter your new username" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            @error('name')
+            <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
         </div>
         <div class="mb-4">
             <label for="email" class="block text-white text-sm font-semibold mb-2">Email</label>
             <input value="{{ Auth::user()->email }}" type="email" id="email" name="email" placeholder="Enter your new email" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            @error('email')
+            <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
         </div>
         <div class="mb-6">
             <label for="password" class="block text-white text-sm font-semibold mb-2">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your new password" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            @error('password')
+            <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+            @enderror
         </div>
-        <button type="submit" class="w-full bg-blue-950 hover:bg-blue-900 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Save</button>
+        <button type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Save</button>
     </form>
+    @if(session('success'))
     <div id="popup-modal" tabindex="-1" class="{{ session('success') ? 'flex' : 'hidden' }} fixed inset-0 z-50 items-center justify-center bg-gray-900 bg-opacity-50">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -35,10 +45,13 @@
                 </button>
                 <div class="p-4 md:p-5 text-center flex flex-col justify-center items-center">
                     <dotlottie-player src="https://lottie.host/21ada2d0-b792-418a-918d-9c16692b6512/P1wwPYejCq.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Successfully updated your profile</h3>
+                    <h3 class="mb-5 text-lg font-normal text-white">{{ session('success') }}</h3>
+                    <a href="{{route('home')}}" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Back to home</a>
+
                 </div>
             </div>
         </div>
     </div>
+    @endif
 </div>
 @endsection

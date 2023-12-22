@@ -14,7 +14,7 @@ class AuthController extends Controller
     {
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->role === 'admin') {
+            if ($user->role === "admin") {
                 return redirect(route("user.index"));
             } else {
                 return redirect(route("home"));
@@ -28,7 +28,7 @@ class AuthController extends Controller
     {
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->role === 'admin') {
+            if ($user->role === "admin") {
                 return redirect(route("user.index"));
             } else {
                 return redirect(route("home"));
@@ -45,8 +45,9 @@ class AuthController extends Controller
             "email" => "required",
             "password" => "required"
         ], [
-            "email.required" => "Email is required",
-            "password.required" => "Password is required"
+            "email.required" => "Email must be filled in",
+            "email.email" => "Invalid email format",
+            "password.required" => "Password must be filled in"
         ]);
 
         $loginInfo = [
@@ -56,7 +57,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($loginInfo)) {
             $user = Auth::user();
-            if ($user->role === 'admin') {
+            if ($user->role === "admin") {
                 return redirect(route("user.index"))->with("success", "Login success");
             } else {
                 return redirect(route("home"))->with("success", "Login success");
@@ -75,10 +76,10 @@ class AuthController extends Controller
             "password" => "required",
         ]);
 
-        $data['name'] = $request->name;
-        $data['email'] = $request->email;
-        $data['password'] = Hash::make($request->password);
-        $data['role'] = 'user';
+        $data["name"] = $request->name;
+        $data["email"] = $request->email;
+        $data["password"] = Hash::make($request->password);
+        $data["role"] = "user";
         $user = User::create($data);
 
         if (!$user) {
