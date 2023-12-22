@@ -17,4 +17,9 @@ class Video extends Model
         'link_id',
         'thumbnail',
     ];
+
+    public function user()
+    {
+        return $this->belongsToMany(User::class, "user_has_video");
+    }
 }

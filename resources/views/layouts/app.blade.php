@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>zanime</title>
   @vite('resources/css/app.css')
   <link rel="icon" href="{{ asset('storage/zakora_rounded.png') }}" type="image/x-icon">
@@ -39,6 +40,7 @@
     var alert = document.getElementById('myAlert');
     alert.style.display = 'none';
   }
+
 </script>
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 

@@ -6,16 +6,16 @@
     </a>
 
     <div class="hidden sm:flex items-center justify-evenly w-full ">
-      <a href="#" class="font-semibold relative cursor-pointer"><span class="group inline-block">
-          Home
-          <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-        </span></a>
       <a href="#top_anime" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           Top Anime
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></a>
       <a href="#for_you" class="font-semibold relative cursor-pointer"><span class="group inline-block">
           For You
+          <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+        </span></a>
+      <a href="/favorites" class="font-semibold relative cursor-pointer"><span class="group inline-block">
+          Your Favorite
           <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
         </span></a>
       <a href="/settings" class="font-semibold relative cursor-pointer"><span class="group inline-block">
@@ -62,16 +62,16 @@
 
     <div class="-translate-y-96 -z-10 absolute top-0 left-0 bg-[#101820] mt-16 min-w-full fixed-top transition duration-500 ease-in-out transform" id="mobile-menu">
       <div class="flex flex-col items-center py-4">
-        <a href="#" class="relative cursor-pointer mb-5"><span class="group inline-block">
-            Home
-            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-          </span></a>
         <a href="#top_anime" class="relative cursor-pointer mb-5"><span class="group inline-block">
             Top Anime
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></a>
         <a href="#for_you" class="relative cursor-pointer mb-4"><span class="group inline-block">
             For You
+            <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+          </span></a>
+        <a href="/favorites" class="font-semibold relative cursor-pointer"><span class="group inline-block">
+            Your Favorite
             <span class="absolute inset-x-0 bottom-0 h-0.5 bg-white origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </span></a>
         <a href="/settings" class="relative cursor-pointer mb-5"><span class="group inline-block">

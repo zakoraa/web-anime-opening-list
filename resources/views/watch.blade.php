@@ -13,7 +13,7 @@
             <h1 class="lg:text-3xl text-xl mb-5">{{$video['anime']}} - {{$video['title']}}</h1>
             <div class="lg:flex-row flex flex-col-reverse">
                 <h1 class="text-lg rounded-2xl bg-slate-800 px-5 py-2 inline-block me-5">Anime : {{$video['anime']}}</h1>
-                <img id="favoriteImg" onclick="toggleLike()" class="cursor-pointer lg:mb-0 mb-5" src="{{ asset('storage/favorite_white.png') }}" alt="like" height="25" width="45" />
+                <img id="favoriteImg" onclick="toggleLike(`{{ $video['id'] }}`)" class="cursor-pointer lg:mb-0 mb-5" src="{{ asset('storage/favorite_white.png') }}" alt="like" height="25" width="45" />
             </div>
         </div>
         <div class="flex  border border-gray-500 flex-col bg-[#101820] rounded-2xl shadow-lg my-10 lg:me-5 lg:w-96 m-5" style=" height: 85vh;">

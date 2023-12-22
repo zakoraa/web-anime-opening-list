@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FavoriteVideo;
+use App\Http\Controllers\FavoriteVideoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
@@ -33,6 +35,10 @@ Route::group(["middleware" => ["auth", 'role:admin,user']], function () {
         return view("settings");
     });
     Route::post('/settings/update', [UserController::class, "update"])->name("user.update");
+    Route::get('/favorites', [FavoriteVideoController::class, 'showFavoriteMovies']);
+    Route::get('/videos/{id}/check-favorite-status', [FavoriteVideoController::class, "checkFavoriteStatus"])->name("video.check.favorite.status");
+    Route::middleware('web')->post('/videos/{id}/add-to-favorites', [FavoriteVideoController::class, "addToFavorites"])->name("video.add.favorite");
+    Route::middleware('web')->post('/videos/{id}/remove-from-favorites', [FavoriteVideoController::class, "removeFromFavorites"])->name("video.remove.favorite");
 
     Route::middleware('role:admin')->group(function () {
         Route::get("/admin", [UserController::class, "index"])->name("user.index");
