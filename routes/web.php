@@ -28,9 +28,9 @@ Route::get("/auth/signup", [AuthController::class, "signup"])->name("signup");
 Route::post("/auth/signup", [AuthController::class, "signupProcess"])->name("signup.process");
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
-Route::group(["middleware" => ["auth", 'role:admin,user']], function () {
-    Route::get('/', [HomeController::class, "index"])->name("home");
-    Route::get('/watch/{id}', [WatchController::class, "index"])->name("watch");
+Route::group(["middleware" => ["auth", 'role:admin, user ']], function () {
+    Route::get('/', [VideoController::class, "showAllVideos"])->name("home");
+    Route::get('/watch/{id}', [VideoController::class, "showSelectedVideo"])->name("watch");
     Route::get('/settings', function () {
         return view("settings");
     });

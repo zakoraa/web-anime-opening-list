@@ -17,6 +17,19 @@ class VideoController extends Controller
         return view("admin/video_table", compact("videos"));
     }
 
+    function showAllVideos()
+    {
+        $videos  = Video::all();
+        return view("/home", compact("videos"));
+    }
+
+    public function showSelectedVideo($id)
+    {
+        $video = Video::find($id);
+        $videos = Video::all();
+        return view("watch", compact("video", "videos"));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

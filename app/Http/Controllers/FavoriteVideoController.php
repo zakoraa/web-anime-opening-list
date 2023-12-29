@@ -12,7 +12,7 @@ class FavoriteVideoController extends Controller
 
     public function showFavoriteMovies()
     {
-        $user =User::find(Auth::user()->id);
+        $user = User::find(Auth::user()->id);
 
         $favoriteVideos = $user->video()->get();
 
