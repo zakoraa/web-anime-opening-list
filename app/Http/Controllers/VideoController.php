@@ -66,12 +66,6 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video)
     {
-        $validated = $request->validate([
-            "title" => "required",
-            "anime" => "required",
-            "link_id" => "required",
-            "thumbnail" => "required"
-        ]);
 
         $values = array(
             "title" => $request->title,

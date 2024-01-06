@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-white font-semibold lg:text-5xl text-3xl text-center mt-5 mb-16">Your Favorite Movies</h1>
+<h1 class="text-white font-semibold lg:text-5xl text-3xl text-center mt-5 mb-16">Your Favorite Videos</h1>
 
 @if(count($favoriteVideos) > 0)
 <div class="wrap gap-x-5 mx-5 grid lg:grid-cols-4 grid-cols-1 text-center items-center justify-center">

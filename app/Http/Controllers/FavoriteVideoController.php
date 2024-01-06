@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class FavoriteVideoController extends Controller
 {
 
-    public function showFavoriteMovies()
+    public function showFavoriteVideos()
     {
         $user = User::find(Auth::user()->id);
 

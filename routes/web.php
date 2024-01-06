@@ -28,22 +28,35 @@ Route::get("/auth/signup", [AuthController::class, "signup"])->name("signup");
 Route::post("/auth/signup", [AuthController::class, "signupProcess"])->name("signup.process");
 Route::get("/logout", [AuthController::class, "logout"])->name("logout");
 
-Route::group(["middleware" => ["auth", 'role:admin, user ']], function () {
-    Route::get('/', [VideoController::class, "showAllVideos"])->name("home");
-    Route::get('/watch/{id}', [VideoController::class, "showSelectedVideo"])->name("watch");
-    Route::get('/settings', function () {
+Route::group(["middleware" => ["auth", "role:admin, user "]], function () {
+    Route::get("/", [VideoController::class, "showAllVideos"])->name("home");
+    Route::get("/watch/{id}", [VideoController::class, "showSelectedVideo"])->name("watch");
+    Route::get("/settings", function () {
         return view("settings");
     });
-    Route::post('/settings/update', [UserController::class, "update"])->name("user.update");
-    Route::get('/favorites', [FavoriteVideoController::class, 'showFavoriteMovies']);
-    Route::get('/videos/{id}/check-favorite-status', [FavoriteVideoController::class, "checkFavoriteStatus"])->name("video.check.favorite.status");
-    Route::middleware('web')->post('/videos/{id}/add-to-favorites', [FavoriteVideoController::class, "addToFavorites"])->name("video.add.favorite");
-    Route::middleware('web')->post('/videos/{id}/remove-from-favorites', [FavoriteVideoController::class, "removeFromFavorites"])->name("video.remove.favorite");
+    Route::post("/settings/update", [UserController::class, "update"])->name("user.update");
 
-    Route::middleware('role:admin')->group(function () {
+    Route::get("/favorites", [FavoriteVideoController::class, "showFavoriteVideos"])->name("favorite.video.index");
+
+    Route::get(
+        "/videos/{id}/check-favorite-status",
+        [FavoriteVideoController::class, "checkFavoriteStatus"]
+    )->name("video.check.favorite.status");
+
+    Route::middleware("web")->post(
+        "/videos/{id}/add-to-favorites",
+        [FavoriteVideoController::class, "addToFavorites"]
+    )->name("video.add.favorite");
+
+    Route::middleware("web")->post(
+        "/videos/{id}/remove-from-favorites",
+        [FavoriteVideoController::class, "removeFromFavorites"]
+    )->name("video.remove.favorite");
+
+    Route::middleware("role:admin")->group(function () {
         Route::get("/admin", [UserController::class, "index"])->name("user.index");
         Route::get("/admin/delete-user/{id}", [UserController::class, "destroy"])->name("user.destroy");
-        Route::get('admin/videos/add', [VideoController::class, "addVideo"])->name("videos.add");
-        Route::resource('admin/videos', VideoController::class);
+        Route::get("admin/videos/add", [VideoController::class, "addVideo"])->name("videos.add");
+        Route::resource("admin/videos", VideoController::class);
     });
 });
